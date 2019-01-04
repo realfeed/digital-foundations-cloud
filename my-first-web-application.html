@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>plot a temperature</title>
+</head>
+<h2>Submit data to plot</h2>
+  <form action="http://localhost:63342/digital-foundations/plotter" method="POST">
+    <div>
+      <label for="time">Time: </label>
+      <input id="time" type="text" name="time" value="{{ current_time }}">
+    </div>
+    <div>
+      <label for="endpoint">Endpoint: </label>
+      <input id="endpoint" type="text" name="endpoint" value="{{ current_endpoint }}">
+    </div>
+    <div>
+      <label for="index">Index: </label>
+      <input id="index" type="text" name="index" value="{{ current_index }}">
+    </div>
+    <div>
+      <button type="submit" onClick="window.location.href=window.location.href">Submit</button>
+    </div>
+  </form>
+  <div>
+    <img src="./plot.png" alt="Temperatures">
+  </div>
+</html>

@@ -1,0 +1,9 @@
+requests
+numpy
+flask
+jupyter
+jupyter-client
+jupyter-console
+jupyter-core
+jsonschema
+notebook
