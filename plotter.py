@@ -1,22 +1,52 @@
-import requests as s
+import requests
 import numpy as np
 import collections
 import matplotlib.pyplot as plt
+import json
 from flask import Flask
 app = Flask(__name__)
 
 @app.route('/my-first-web-application', methods = ['POST'])
 
-def plotter(current_time, current_endpoint, current_index):
+def get_data(minutesToView, endpoint, index):
 
-    headers{'Content-type': 'application/json'}
-    url = current_endpoint + current_index + '/_search'
-    query = {'query': {'term': {'timestampGMT': current_time}}}
+    headers = {'Content-Type': 'application/json'}
 
-    r = s.get(url, data=query, headers=headers) # requests.get, post, and delete have similar syntax
+    url = endpoint + index + '/_search'
+
+    then = "now" + "-" + str(minutesToView) + "m"
+
+    query = {
+            "query": {
+                "bool": {
+                    "filter": {
+                        "range": {
+                            "metadata.time": {
+                                "gte": then,
+                                "lt":  "now"
+                            }
+                        }
+                    }
+                }
+            }
+    }
+
+    url = endpoint + index + "/_search"
+
+    query_str = json.dumps(query)
+
+    return {"url": url, "query": query_str, "headers": headers}
+
+def API_request():
+
+    response = requests.get(get_data()["url"], data=get_data()["query"], headers=get_data()["headers"])
+
+    return response
+
+def plot_data():
 
     timeTemperature = map(
-        lambda y: y['temperature'], r
+        lambda y: y['temperature'], API_request()
     )
 
     hist = collections.Counter(timeTemperature)
