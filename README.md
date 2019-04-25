@@ -29,6 +29,7 @@ pip install -r requirements.txt
 
 ## Print "Hello, world!" and time.now
 ```
+python
 do = printer.Printer()
 do.hello_world()
 do.time_now()
