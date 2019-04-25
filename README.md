@@ -52,4 +52,4 @@ Navigate to "my-first-request.ipnyb" and run all cells.
 cd ./app
 python plotter.py
 ```
-View using web browser using link displayed in terminal
+Interface using web browser using link displayed in terminal
