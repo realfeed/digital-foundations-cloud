@@ -13,6 +13,9 @@ The is the course reference material. It includes:
 * Install "Atom Text Editor": https://atom.io
 * Install "Putty": https://www.putty.org/
 * Sign-up to "Github": https://github.com/
+* Set-up Python language support for `Atom`: https://atom.io/packages/ide-python
+* Set-up HTML language support for `Atom`: https://atom.io/packages/ide-html
+* Set-up Jupyter Notebook file support for `Atom`: https://atom.io/packages/jupyter-notebook
 
 ## Clone this repository and checkout master branch
 ```
@@ -49,4 +52,4 @@ Navigate to "my-first-request.ipnyb" and run all cells.
 cd ./app
 python plotter.py
 ```
-View using web browser on localhost
+View using web browser using link displayed in terminal
