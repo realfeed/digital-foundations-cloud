@@ -27,7 +27,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Print "Hello, world!" and current time_now
+## Print "Hello, world!" and time.now
 ```
 do = printer.Printer()
 do.hello_world()
