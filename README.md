@@ -40,6 +40,7 @@ do.time_now()
 
 ## Edit "my-first-page.html" and view on localhost
 Open "my-first-page.html" in suitable text editor and edit text content with ``<body/>`` tag.
+Open "my-first-page.html" with web browser.
 
 ## Use "my-first-request.ipynb" to make an API request and work with response payload_raw
 ```
