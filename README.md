@@ -1,4 +1,4 @@
-# Welcome to Foundations in Digital Development (for the Cloud)
+# Foundations in Digital Development (for the Cloud)
 
 Course Repository Version 1.0.0
 
