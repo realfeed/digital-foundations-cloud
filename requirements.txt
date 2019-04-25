@@ -6,3 +6,6 @@ jupyter-client
 jupyter-console
 jupyter-core
 notebook
+pandas
+requests
+matplotlib
