@@ -12,7 +12,9 @@ The is the course reference material. It includes:
 * Install "Python 3": https://www.python.org/downloads/
 * Install "Atom Text Editor": https://atom.io
 * Install "Putty": https://www.putty.org/
+* Install "Docker Desktop": https://docs.docker.com/v17.09/engine/installation/#supported-platforms
 * Sign-up to "Github": https://github.com/
+* Sign-up to "Docker Hub": https://id.docker.com/login/
 * Set-up Python language support for Atom: https://atom.io/packages/ide-python
 * Set-up HTML language support for Atom: https://atom.io/packages/ide-html
 * Set-up Jupyter Notebook file support for Atom: https://atom.io/packages/jupyter-notebook
@@ -55,3 +57,11 @@ cd ./app
 python plotter.py
 ```
 Interface using web browser using link displayed in terminal
+
+## Create a Docker image called "my-web-app" of the Flask web application and view as a list
+```
+docker login
+touch dockerfile
+docker build -t my-web-app .
+docker images
+```
