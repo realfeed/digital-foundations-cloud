@@ -61,7 +61,7 @@ Interface using web browser using link displayed in terminal
 ## Create a Docker image called "my-web-app" of the Flask web application and view as a list
 ```
 docker login
-touch dockerfile
+touch Dockerfile
 docker build -t my-web-app .
 docker images
 ```
